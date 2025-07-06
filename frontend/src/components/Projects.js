@@ -1,17 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTheme } from "../contexts/ThemeContext";
 import { Github, ExternalLink, Clock, CheckCircle } from "lucide-react";
 
 const Projects = ({ data }) => {
   const { isDark } = useTheme();
   const [filter, setFilter] = useState("all");
+  const [projects, setProjects] = useState(data || []);
+
+  useEffect(() => {
+    setProjects(data || []);
+  }, [data]);
 
   const filterProjects = (projects, filter) => {
     if (filter === "all") return projects;
-    return projects.filter(project => project.status.toLowerCase() === filter.toLowerCase());
+    return projects.filter(project => 
+      project.status.toLowerCase() === filter.toLowerCase()
+    );
   };
 
-  const filteredProjects = filterProjects(data, filter);
+  const filteredProjects = filterProjects(projects, filter);
 
   return (
     <section id="projects" className="py-20 relative">
@@ -163,6 +170,14 @@ const Projects = ({ data }) => {
             </div>
           ))}
         </div>
+
+        {filteredProjects.length === 0 && (
+          <div className="text-center py-16">
+            <p className={`text-xl ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+              Bu filtr bo'yicha loyihalar topilmadi
+            </p>
+          </div>
+        )}
 
         {/* CTA Section */}
         <div className={`mt-16 p-8 rounded-2xl text-center ${
