@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTheme } from "../contexts/ThemeContext";
 import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
+import { contactAPI } from "../services/api";
 
 const Contact = ({ data }) => {
   const { isDark } = useTheme();
@@ -23,22 +24,28 @@ const Contact = ({ data }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      await contactAPI.submitContact(formData);
       setSubmitStatus("success");
-      setIsSubmitting(false);
       setFormData({
         name: "",
         email: "",
         subject: "",
         message: ""
       });
+    } catch (error) {
+      console.error('Error submitting contact form:', error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
       
+      // Clear status after 5 seconds
       setTimeout(() => {
         setSubmitStatus(null);
-      }, 3000);
-    }, 1000);
+      }, 5000);
+    }
   };
 
   return (
@@ -156,6 +163,12 @@ const Contact = ({ data }) => {
             {submitStatus === "success" && (
               <div className="mb-6 p-4 bg-green-500/20 text-green-500 rounded-lg">
                 Xabaringiz muvaffaqiyatli yuborildi! Tez orada javob beraman.
+              </div>
+            )}
+            
+            {submitStatus === "error" && (
+              <div className="mb-6 p-4 bg-red-500/20 text-red-500 rounded-lg">
+                Xabar yuborishda xatolik yuz berdi. Iltimos qayta urinib ko'ring.
               </div>
             )}
             
