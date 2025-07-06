@@ -3,6 +3,11 @@ from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from pathlib import Path
 import logging
+import sys
+import os
+
+# Add backend directory to Python path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # Import routes
 from routes.portfolio import router as portfolio_router
