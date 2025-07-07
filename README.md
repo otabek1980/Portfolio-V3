@@ -2,7 +2,8 @@
 Zamonaviy shaxsiy portfolioga xush kelibsiz!
 Bu loyiha — frontend va backend qismlardan iborat bo‘lgan zamonaviy, interaktiv va mobilga moslashuvchan portfoliodir. Asosiy maqsad — dizaynerlar, dasturchilar yoki freelancerlar o‘z ishlarini professional tarzda taqdim eta olishlari uchun platforma yaratish.
 
-*🚀 Texnologiyalar*
+**🚀 Texnologiyalar**
+
 **Frontend:**
 
 - ReactJS
