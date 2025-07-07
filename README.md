@@ -1,35 +1,35 @@
-🌐 Portfolio-V3
+# 🌐 Portfolio-V3
 Zamonaviy shaxsiy portfolioga xush kelibsiz!
 Bu loyiha — frontend va backend qismlardan iborat bo‘lgan zamonaviy, interaktiv va mobilga moslashuvchan portfoliodir. Asosiy maqsad — dizaynerlar, dasturchilar yoki freelancerlar o‘z ishlarini professional tarzda taqdim eta olishlari uchun platforma yaratish.
 
-🚀 Texnologiyalar
-Frontend:
+*🚀 Texnologiyalar*
+**Frontend:**
 
-ReactJS
+- ReactJS
 
-TailwindCSS
+- TailwindCSS
 
-CRACO (Custom config)
+- CRACO (Custom config)
 
-Framer Motion (animatsiyalar uchun)
+- Framer Motion (animatsiyalar uchun)
 
-Backend:
+**Backend:**
 
-FastAPI
+- FastAPI
 
-MongoDB (xabarlarni saqlash uchun)
+- MongoDB (xabarlarni saqlash uchun)
 
-Uvicorn (local server)
+- Uvicorn (local server)
 
-🔗 Xususiyatlar
-🧑‍💼 Portfolio sahifasi: Siz haqingizda batafsil ma’lumot
+**🔗 Xususiyatlar**
+- 🧑‍💼 Portfolio sahifasi: Siz haqingizda batafsil ma’lumot
 
-🖼️ Ishlar ro‘yxati (Projects): Har bir loyiha uchun tasvir, tavsif va havola
+- 🖼️ Ishlar ro‘yxati (Projects): Har bir loyiha uchun tasvir, tavsif va havola
 
-📞 Aloqa (Contact): Foydalanuvchilar sizga xabar yuborishi mumkin
+- 📞 Aloqa (Contact): Foydalanuvchilar sizga xabar yuborishi mumkin
 
-🔐 Admin API: Backend orqali xabarlarni ko‘rish, belgilash yoki o‘chirish
+- 🔐 Admin API: Backend orqali xabarlarni ko‘rish, belgilash yoki o‘chirish
 
-📱 To‘liq responsive dizayn — mobil, planshet va desktopda ideal ko‘rinadi
+- 📱 To‘liq responsive dizayn — mobil, planshet va desktopda ideal ko‘rinadi
 
-Tomosha qilish uchun link: https://webbuilder-1.preview.emergentagent.com/
+**Tomosha qilish uchun link: https://webbuilder-1.preview.emergentagent.com/**
